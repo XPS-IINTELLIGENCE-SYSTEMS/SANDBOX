@@ -1,0 +1,144 @@
+:root {
+  --bg: #020202;
+  --hot: #ff1685;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 22, 133, 0.18), transparent 36rem),
+    var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reference-site {
+  position: relative;
+  width: min(100vw, 1536px);
+  margin: 0 auto;
+  background: #000;
+  box-shadow: 0 0 80px rgba(255, 22, 133, 0.15);
+}
+
+.reference-site img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hotspots a {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 110%;
+  border-radius: 4px;
+}
+
+.hotspots a:focus-visible {
+  outline: 2px solid var(--hot);
+  outline-offset: 2px;
+  background: rgba(255, 22, 133, 0.22);
+}
+
+.hotspots .home {
+  left: 28.2%;
+  top: 1.2%;
+  width: 3.4%;
+  height: 3.2%;
+}
+
+.hotspots .models {
+  left: 35.9%;
+  top: 1.2%;
+  width: 4.2%;
+  height: 3.2%;
+}
+
+.hotspots .services {
+  left: 40.7%;
+  top: 1.2%;
+  width: 5%;
+  height: 3.2%;
+}
+
+.hotspots .apply {
+  right: 4.7%;
+  top: 0.7%;
+  width: 6.1%;
+  height: 3.9%;
+}
+
+.mobile-summary,
+.anchor-row {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+.mobile-summary {
+  display: none;
+}
+
+.mobile-summary p {
+  margin: 0 0 8px;
+  color: var(--hot);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mobile-summary h1 {
+  margin: 0 0 18px;
+  font-size: clamp(36px, 13vw, 64px);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.mobile-summary span {
+  color: var(--hot);
+}
+
+.mobile-summary a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  padding: 0 24px;
+  border-radius: 4px;
+  background: var(--hot);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.anchor-row {
+  position: absolute;
+  left: -10000px;
+}
+
+@media (max-width: 720px) {
+  .reference-site {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .reference-site img {
+    width: 1280px;
+    max-width: none;
+  }
+
+  .mobile-summary {
+    display: block;
+  }
+}
